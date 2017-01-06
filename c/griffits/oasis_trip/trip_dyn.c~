@@ -1,0 +1,18 @@
+#include "island.h"
+
+void main() {
+	island amity = {"Friendship", "09:00", "17:00", NULL};
+	island craggy = {"Mounains", "09:00", "17:00", NULL};
+	island isla_nublar = {"Rainings", "09:00", "17:00", NULL};
+	island shutter = {"Evil", "09:00", "17:00", NULL};
+
+	amity.next = &craggy;
+	craggy.next = &isla_nublar;
+	isla_nublar.next = &shutter;
+
+	island skull = {"Turtle", "09:00", "17:00", NULL};
+	isla_nublar.next = &skull;
+	skull.next = &shutter;
+
+	display(&amity);
+}

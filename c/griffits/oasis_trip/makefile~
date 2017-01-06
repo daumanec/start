@@ -1,0 +1,9 @@
+island.o: island.c island.h
+	gcc -c island.c
+
+trip.o: trip.c island.c island.h
+	gcc -c trip.c
+
+trip: trip.o island.o
+	gcc island.o trip.o -o trip
+
