@@ -1,0 +1,26 @@
+df - see mounted devices
+
+ps -report a snapshot of current processes 
+
+& - open program, and the terminal don't wait untill you close it (запуск программы в фоне)
+
+// Extract files
+tar - Tape ARchiver
+And the options:
+x - extract
+v - verbose output (lists all files as they are extracted)
+j - deal with bzipped file
+f - read from a file, rather than a tape device
+"tar --help" will give you more options
+
+// Bunch images,text,pdf files in 1 pdf file
+convert image1.jpg image2.png text.txt PDFfile.pdf outputFileName.pdf
+
+
+// Eject flash drive
+first:
+lsblk (lsblk -f) - see your disks
+than:
+udisksctl unmount -b /dev/sdb1 - where sdb1 is your flash-drive
+udisksctl power-off -b /dev/sdb1
+
