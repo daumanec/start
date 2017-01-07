@@ -24,3 +24,4 @@ than:
 udisksctl unmount -b /dev/sdb1 - where sdb1 is your flash-drive
 udisksctl power-off -b /dev/sdb1
 
+echo $? - to read return of a function

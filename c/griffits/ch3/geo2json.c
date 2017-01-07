@@ -17,6 +17,16 @@ int main()
 		else {
 			started = 1;
 		}
+
+		if (latitude <= -180 || latitude > 180) {
+			fprintf(stderr, "Wrong latitude: %f\n", latitude);
+			return 2;
+		}
+		if (longitude < -90 || longitude > 90 ) {
+			fprintf(stderr, "Wrong longitude: %f\n", longitude);
+			return 2;
+		}
+
 		printf("{latitude: %f, longitude: %f, info: '%s'}", latitude, longitude, info);
 	}
 
