@@ -1,0 +1,18 @@
+/*
+ * topSecret.c
+ *
+ *  Created on: Feb 19, 2017
+ *      Author: zin
+ */
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct node {
+	char *question;
+	struct node *no;
+	struct node *yes;
+} node;
+

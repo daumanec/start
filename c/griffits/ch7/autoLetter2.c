@@ -27,6 +27,7 @@ void Marriage(response r)
     puts("us with a proposal of marriage.");
 }
 
+void (*replies[])(response) = {Dump, SecondChance, Marriage};
 
 int main()
 {
@@ -36,16 +37,7 @@ int main()
     };
     int i;
     for (i = 0; i < 4; i++) {
-	switch (r[i].type) {
-	case DUMP:
-	    Dump(r[i]);
-	    break;
-	case SECOND_CHANCE:
-	    SecondChance(r[i]);
-	    break;
-	default:
-	    Marriage(r[i]);
-	}
+	replies[r[i].type](r[i]);
     }
     return 0;
 }

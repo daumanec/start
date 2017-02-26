@@ -1,0 +1,13 @@
+all: trip1
+
+clean:
+	rm trip1.o trip1
+
+trip1: trip1.o island.o
+	gcc island.o trip1.o -o trip1
+
+trip1.o: trip1.c island.h
+	gcc -c trip1.c
+	
+island.o: island.c island.h
+	gcc -c island.c

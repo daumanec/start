@@ -1,0 +1,10 @@
+all: topSecret
+
+clean:
+	rm topSecret.o topSecret
+
+topSecret.o:
+	gcc -c topSecret.c
+
+topSecret:
+	gcc topSecret.o -o topSecret

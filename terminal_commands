@@ -1,9 +1,10 @@
+-------------------------------------------------------------------------------
 df - see mounted devices
-
+-------------------------------------------------------------------------------
 ps -report a snapshot of current processes 
-
+-------------------------------------------------------------------------------
 & - open program, and the terminal don't wait untill you close it (запуск программы в фоне)
-
+-------------------------------------------------------------------------------
 // Extract files
 tar - Tape ARchiver
 And the options:
@@ -12,16 +13,20 @@ v - verbose output (lists all files as they are extracted)
 j - deal with bzipped file
 f - read from a file, rather than a tape device
 "tar --help" will give you more options
-
+-------------------------------------------------------------------------------
 // Bunch images,text,pdf files in 1 pdf file
 convert image1.jpg image2.png text.txt PDFfile.pdf outputFileName.pdf
-
-
+-------------------------------------------------------------------------------
 // Eject flash drive
 first:
 lsblk (lsblk -f) - see your disks
 than:
 udisksctl unmount -b /dev/sdb1 - where sdb1 is your flash-drive
 udisksctl power-off -b /dev/sdb1
-
+-------------------------------------------------------------------------------
 echo $? - to read return of a function
+-------------------------------------------------------------------------------
+rsync -a /images/ /images2/
+If images with the same name exist in both directories, the command above will overwrite /images2/SOMEPATH/SOMEFILE with /images/SOMEPATH/SOMEFILE. If you want to replace only older files, add the option -u. If you want to always keep the version in /images2, add the option --ignore-existing.
+If you want to move the files from /images, with rsync, you can pass the option --remove-source-files. Then rsync copies all the files in turn, and removes each file when it's done. This is a lot slower than moving if the source and destination directories are on the same filesystem.
+-------------------------------------------------------------------------------
