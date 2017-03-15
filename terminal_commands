@@ -1,9 +1,27 @@
 -------------------------------------------------------------------------------
-df - see mounted devices
+programName & - execute program and removes from terminal
 -------------------------------------------------------------------------------
-ps -report a snapshot of current processes 
+df - see mounted devices, also free space on hdd
+-------------------------------------------------------------------------------
+ps - shows PID of processes 
+ps -ef - all processes with full listing
+-------------------------------------------------------------------------------
+kill [option] PID1 PID2 PID3
+example: kill -9 3743 - kills the process with pid=3743
+pkill firefox - use name, not pid
+killall firefox - all processes with this name
+xkill - kill with mouth click
 -------------------------------------------------------------------------------
 & - open program, and the terminal don't wait untill you close it (запуск программы в фоне)
+-------------------------------------------------------------------------------
+Locating applications
+which
+whereis
+tree - displays a folder ierarhy
+-------------------------------------------------------------------------------
+Links
+ln - hard link
+ln -s - soft link
 -------------------------------------------------------------------------------
 // Extract files
 tar - Tape ARchiver
